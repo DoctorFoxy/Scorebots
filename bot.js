@@ -13,9 +13,15 @@ client.on('message', message => { //PING - PONG
 
 client.on('message', message => { //HELP MENU
     if (message.content === '-help') {
-        var helpmenu = "```\nThis is the help menu for MoonBot:\n-help: Shows this menu.\n-ping: Replies pong.```";
+        var helpmenu = "```\nThis is the help menu for MoonBot:\n-help: Shows this menu.\n-ping: Replies pong.\n-avatar: Gives you the link to your avatar.```";
     	message.channel.send(helpmenu);
   	}   
+});
+
+client.on('message', message => {
+  if (message.content === '-avatar') {
+    message.reply(message.author.avatarURL);
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
