@@ -58,7 +58,7 @@ client.on('message', message => { // MILD
 
 client.on('message', message => { // RC
   if (message.content === '-rc') {
-      message.channel.send("Reality Check: A test to establish whether you are in a dream or waking life, actively done during the day in hopes that the habit will continue within dreams.");
+      message.channel.send("Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.");
   }
 });
 
