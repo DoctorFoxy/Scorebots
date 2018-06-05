@@ -9,12 +9,14 @@ client.on('message', message => {
     if (message.content === '-ping') {
     	message.reply('pong');
   	}   
+});
+
 client.on('message', message => {
     if (message.content === '-test') {
-    	message.channel.say('succes!');
-  	}  
-   
+    	message.channel.say('Succes!');
+  	}   
 });
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
+
