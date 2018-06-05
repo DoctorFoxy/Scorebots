@@ -31,6 +31,13 @@ client.on('message', message => { //TECHNIQUES COMMAND
   }
 });
 
+client.on('message', message => { //TECHNIQUES COMMAND
+  if (message.content === '-techs') {
+      var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
+      message.channel.send(techs);
+  }
+});
+
 client.on('message', message => { // WILD
   if (message.content === '-wild') {
       message.channel.send("Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.");
