@@ -13,7 +13,7 @@ client.on('message', message => { //PING - PONG
 
 client.on('message', message => { //HELP MENU
     if (message.content === '-help') {
-        var helpmenu = "```\nThis is the help menu for MoonBot:\n-help: Shows this menu.\n-ping: Replies pong.\n-avatar: Gives you the link to your avatar.\n-techniques: Shows list of lucid dreaming techniques. Use -\"technique\" without the brackets to see an explanation of that tech. ```";
+        var helpmenu = "```\nThis is the help menu for MoonBot:\n-help: Shows this menu.\n-ping: Replies pong.\n-avatar: Gives you the link to your avatar.\n-techniques: Shows list of lucid dreaming techniques.\nUse -\"technique\" without the brackets to see an explanation of that tech. ```";
     	message.channel.send(helpmenu);
   	}   
 });
