@@ -13,7 +13,16 @@ client.on('message', message => { //PING - PONG
 
 client.on('message', message => { //HELP MENU
     if (message.content === '-help') {
-    	message.channel.send("test");
+        var helpmenu = "```
+        This is the help menu for MoonBot:
+        -help: Shows this menu.
+        -ping: Replies pong.
+        
+        
+        
+                        ```";
+        
+    	message.channel.send(helpmenu);
   	}   
 });
 
