@@ -52,7 +52,7 @@ client.on('message', message => { // FILD
 
 client.on('message', message => { // MILD
   if (message.content === '-mild') {
-      message.channel.send("Mnemonically Induced Lucid Dream: MILD is telling yourself when ready to sleep that you're going to become lucid in your dream, then visualizing yourself in a dream becoming lucid. And keep repeating that.");
+      message.channel.send("Mnemonically Induced Lucid Dream: MILD is using prospective memory to get lucid. MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.");
   }
 });
 
