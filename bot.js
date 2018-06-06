@@ -74,6 +74,11 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
     else {
       message.channel.send(fortune[random2]);
     }
+  //REQUEST BOT VERSION
+  }
+  else if (message.content === "-version") {
+    var pjson = require('./package.json');
+    message.channel.send(pjson.version);
   }
 
 });
