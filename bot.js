@@ -19,7 +19,8 @@ client.on("message", message => {
     -ping: Replies pong.
     -avatar: Gives you the link to your avatar.
     -techniques: Shows list of lucid dreaming techniques.
-    Use -"technique" without the quotes to see an explanation of that tech. \`\`\``;
+    Use -"technique" without the quotes to see an explanation of that tech.
+    -randomtech: Gives you a random tech that you can try out.\`\`\``;
     message.author.sendMessage(helpmenu)
   }
   else if (message.content === "-avatar") { //SHOW AVATAR
@@ -45,14 +46,17 @@ client.on("message", message => {
   var i;
   for (i = 0; i < techs.length; i++) {
     if (message.content === ("-" + technames[i])) {
-      message.channel.send(techs[i])
+      message.channel.send(techs[i]);
       break;
     }
 
   }
 
   //CONTINUE COMMANDS
-
+  if (message.content === "-randomtech") {
+    var random = Math.floor((Math.random() * techs.length) + 1);
+    message.channel.send(random.toString());
+  }
 
 
 
