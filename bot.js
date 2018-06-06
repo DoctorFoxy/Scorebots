@@ -7,10 +7,10 @@ client.on('ready', () => { // BOT READY NOTIFICATION
 
 client.on('message', message => {
   //var text = message.content;
-  if (message.content === "-ping") {
-    message.reply("Pong!")
+  if (message.content === '-ping') {
+    message.reply('Pong!')
   }
-  
+
 });
 
 
