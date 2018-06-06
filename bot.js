@@ -78,7 +78,7 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
   }
   else if (message.content === "-version") {
     var pjson = require('./package.json');
-    message.channel.send("MoonBot, created by DoctorFoxy\nVersion: " + pjson.version);
+    message.channel.send("```MoonBot, created by DoctorFoxy\nVersion: " + pjson.version + "```");
   }
 
 });
