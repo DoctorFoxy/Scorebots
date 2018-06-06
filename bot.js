@@ -46,13 +46,14 @@ client.on("message", message => {
   else if (message.content === "-fortune") {
     var random2 = Math.floor((Math.random() * 12) + 1);
     var easter = Math.floor((Math.random() * 120) + 1);
-  if (easter == 120) {
-    message.channel.send("EASTER EGG!! You found a magical fox!");
+    if (easter == 120) {
+      message.channel.send("EASTER EGG!! You found a magical fox!");
+    }
+    else {
+      message.channel.send(fortune[random2]);
+    }
   }
-  else {
-    message.channel.send(fortune[random2]);
-  }
-  }
+  
   //REQUEST BOT VERSION
   else if (message.content === "-version") {
     var pjson = require('./package.json');
@@ -61,6 +62,8 @@ client.on("message", message => {
   else if (message.content === "-frank") {
     message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg");
   }
+
+
 
   //TECHS
   var wild = "Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.",
