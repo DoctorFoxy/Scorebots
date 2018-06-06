@@ -6,8 +6,9 @@ client.on('ready', () => { // BOT READY NOTIFICATION
 });
 
 client.on('message', message => { //PING - PONG
-    var message = str.toLowerCase(message.content);
-    if (message === '-ping') {
+    //var message = str.toLowerCase(message.content);
+    var messag = message.content;
+    if (messag === '-ping') {
     	message.reply('pong');
   	}
 });
