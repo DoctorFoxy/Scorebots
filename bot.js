@@ -34,7 +34,7 @@ client.on("message", message => {
   var wild = "Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.",
   fild = "Finger Induced Lucid Dream: Similar to a WILD but you use finger motions to preserve your conscious/awareness as you fall asleep.",
   mild = `Mnemonically Induced Lucid Dream: MILD is using prospective memory to get lucid.
-  MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
+MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
   rc = "Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.",
   wbtb = "Wake Back To Bed: Waking up for a couple of minutes, then going back to bed increases the chances of lucid dreaming. Use that time to read about lucid dreaming or plan your dreams.",
   deild = "",
@@ -55,7 +55,7 @@ client.on("message", message => {
   //RANDOM TECH
   if (message.content === "-randomtech") {
     var random = Math.floor((Math.random() * techs.length) + 1);
-    message.channel.send("You rolled " + technames[random] + "\n" + techs[random]);
+    message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
   }
 
   //RC
