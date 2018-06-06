@@ -12,7 +12,7 @@ client.on("message", message => {
     message.reply("Pong!")
   }
   else if (message.content === "-help") { //HELP MENU
-    var helpmenu = `\`\`\`prolog\n
+    var helpmenu = `\`\`\`fix\n
     This is the help menu for MoonBot:
     ==================================
     -help: Shows this menu.
@@ -88,7 +88,7 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
 
 
 
-  
+
 });
 
 //LOGIN
