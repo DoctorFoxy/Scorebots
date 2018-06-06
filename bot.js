@@ -61,24 +61,6 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
 
 });
 
-//RC
-var rc = true;
-var now = new Date();
-//var delay = 60 * 60 * 1000; // 1 hour in msec
-var delay = 10 * 1000;
-var start = delay - (now.getMinutes() * 60 + now.getSeconds()) * 1000 + now.getMilliseconds();
-
-if (rc) {
-  setTimeout(function doSomething() {
-     // do the operation
-     guildObj.defaultChannel.send("You should do a Reality Check.");
-  
-     // schedule the next tick
-     setTimeout(doSomething, delay);
-  }, start);
-}
-
-
 
 
 //LOGIN
