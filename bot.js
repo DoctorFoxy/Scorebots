@@ -24,8 +24,7 @@ client.on("message", message => {
   else if (message.content === "-avatar") { //SHOW AVATAR
     message.reply(message.author.avatarURL);
   }
-  var content = message.content;
-  else if (content === "-techniques" || content === "-techs" || content === "-tech") { //SHOW ALL TECHS
+  else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
     var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
     message.channel.send(techs);
   }
