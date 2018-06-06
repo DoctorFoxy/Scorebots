@@ -44,14 +44,15 @@ client.on("message", message => {
 
   var i;
   for (i = 0; i < techs.length; i++) {
-    if (message.content === technames[i]) {
+    if (message.content === ("-" + technames[i])) {
       message.channel.send(techs[i])
+      break;
     }
 
   }
 
   //CONTINUE COMMANDS
-  
+
 
 
 
