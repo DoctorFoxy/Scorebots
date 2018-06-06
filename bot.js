@@ -5,7 +5,7 @@ client.on('ready', () => { // BOT READY NOTIFICATION
   console.log('I am ready!');
 });
 
-client.on('message', (message) => {
+client.on('message', message => {
   //var text = message.content;
   if (message.content === "-ping") {
     message.reply("Pong!")
