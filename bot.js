@@ -21,14 +21,17 @@ client.on("message", message => {
     Use -"technique" without the quotes to see an explanation of that tech. \`\`\``;
     message.author.sendMessage(helpmenu)
   }
-  else if (message.content === '-avatar') { //SHOW AVATAR
+  else if (message.content === "-avatar") { //SHOW AVATAR
     message.reply(message.author.avatarURL);
+  }
+  else if (message.content === "-techniques" || "-techs" || "-tech") { //SHOW ALL TECHS
+    var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
+    message.channel.send(techs);
   }
 
 
 
 
-  
 });
 
 client.login(process.env.BOT_TOKEN);
