@@ -10,8 +10,15 @@ client.on("message", message => {
   if (message.content === "-ping") {
     message.reply("Pong!")
   }
-  else if {
-
+  else if (message.content === "-help") {
+    var helpmenu = `\`\`\`\n
+    This is the help menu for MoonBot:\n
+    -help: Shows this menu.\n
+    -ping: Replies pong.\n
+    -avatar: Gives you the link to your avatar.\n
+    -techniques: Shows list of lucid dreaming techniques.\n
+    Use -"technique" without the quotes to see an explanation of that tech. \`\`\``;
+    message.author.sendMessage(helpmenu)
   }
   else {
     message.channel.send("This is an invalid command.")
