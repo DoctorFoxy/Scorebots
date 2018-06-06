@@ -31,10 +31,14 @@ client.on("message", message => {
   else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
     message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
   }
+
   //RANDOM TECH
-  else if (message.content === "-randomtech") {
+  if (message.content === "-randomtech") {
     var random = Math.floor((Math.random() * techs.length) + 1);
     message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
+  }
+  else if (message.content === "-frank") {
+    message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
   }
 
   //NIGHTFORTUNE
@@ -43,7 +47,7 @@ client.on("message", message => {
                 "A crazy dream awaits you.", "Nothing better than waking uping refreshed.", "A boring night awaits you.", "You will wake up having to pee...",
                 "Golden ticket: The next technique you try will work 100%!!", "You will talk to a dragon in your dream."];
 
-  else if (message.content === "-fortune") {
+  if (message.content === "-fortune") {
     var random2 = Math.floor((Math.random() * 12) + 1);
     var easter = Math.floor((Math.random() * 120) + 1);
     if (easter == 120) {
@@ -52,18 +56,12 @@ client.on("message", message => {
     else {
       message.channel.send(fortune[random2]);
     }
-  }
-  
   //REQUEST BOT VERSION
+  }
   else if (message.content === "-version") {
     var pjson = require('./package.json');
     message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + pjson.version + "``");
   }
-  else if (message.content === "-frank") {
-    message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg");
-  }
-
-
 
   //TECHS
   var wild = "Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.",
@@ -86,7 +84,7 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
     }
 
   }
-
+  
 });
 
 //LOGIN
