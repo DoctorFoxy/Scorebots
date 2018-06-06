@@ -6,9 +6,15 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 });
 
 client.on("message", message => {
-  var text = str.toLowerCase(message.content);
-  if (text === "-ping") {
+
+  if (message.content === "-ping") {
     message.reply("Pong!")
+  }
+  else if {
+
+  }
+  else {
+    message.channel.send("This is an invalid command.")
   }
 
 });
