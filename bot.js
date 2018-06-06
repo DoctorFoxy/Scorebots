@@ -7,20 +7,28 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 
 client.on("message", message => {
 
-  if (message.content === "-ping") {
+  if (message.content === "-ping") { //PING-PONG
     message.reply("Pong!")
   }
-  else if (message.content === "-help") {
+  else if (message.content === "-help") { //HELP MENU
     var helpmenu = `\`\`\`\n
-    This is the help menu for MoonBot:\n
-    -help: Shows this menu.\n
-    -ping: Replies pong.\n
-    -avatar: Gives you the link to your avatar.\n
-    -techniques: Shows list of lucid dreaming techniques.\n
+    This is the help menu for MoonBot:
+    ==================================
+    -help: Shows this menu.
+    -ping: Replies pong.
+    -avatar: Gives you the link to your avatar.
+    -techniques: Shows list of lucid dreaming techniques.
     Use -"technique" without the quotes to see an explanation of that tech. \`\`\``;
     message.author.sendMessage(helpmenu)
   }
+  else if (message.content === '-avatar') { //SHOW AVATAR
+    message.reply(message.author.avatarURL);
+  }
 
+
+
+
+  
 });
 
 client.login(process.env.BOT_TOKEN);
