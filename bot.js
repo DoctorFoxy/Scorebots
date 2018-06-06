@@ -7,9 +7,9 @@ client.on('ready', () => { // BOT READY NOTIFICATION
 
 client.on('message', message);
 
-function message() {
+function message(message) {
     var text = message.content;
-    
+
     if (text === '-ping') { //PING - PONG
     message.reply('pong');
     }
