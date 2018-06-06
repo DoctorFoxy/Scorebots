@@ -20,9 +20,6 @@ client.on("message", message => {
     Use -"technique" without the quotes to see an explanation of that tech. \`\`\``;
     message.author.sendMessage(helpmenu)
   }
-  else {
-    message.channel.send("This is an invalid command.")
-  }
 
 });
 
