@@ -20,7 +20,8 @@ client.on("message", message => {
     -avatar: Gives you the link to your avatar.
     -techniques: Shows list of lucid dreaming techniques.
     Use -"technique" without the quotes to see an explanation of that tech.
-    -randomtech: Gives you a random tech that you can try out.\`\`\``;
+    -randomtech: Gives you a random tech that you can try out.
+    -fortune: Tells you a fortune of your upcomming night.\`\`\``;
     message.author.sendMessage(helpmenu)
   }
   else if (message.content === "-avatar") { //SHOW AVATAR
@@ -58,7 +59,24 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
     message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
   }
 
-
+  //NIGHTFORTUNE
+  var fortune = ["You will have a very vivid dream tonight.", "A creepy nightmare awaits you.", "You will have an LD!",
+                "You will sleep very deep and well tonight.", "You will struggle to fall asleep.", "You wont have any dream tonight ;("
+                "A crazy dream awaits you.", "Nothing better than waking uping refreshed.", "A boring night awaits you.", "You will wake up having to pee...",
+                "Golden ticket: The next technique you try will work 100%!!", "You will talk to a dragon in your dream."];
+  
+  if (message.content === "-fortune") {
+    var random = Math.floor((Math.random() * 12) + 1);
+    var easter = Math.floor((Math.random() * 120) + 1);
+    if (easter == 120) {
+      message.channel.send("EASTER EGG!! You found a magical fox!");
+    }
+    else {
+      message.channel.send(fortune[random]);
+    }
+  }
+  
+  
 });
 
 //LOGIN
