@@ -52,11 +52,24 @@ client.on("message", message => {
 
   }
 
-  //CONTINUE COMMANDS
+  //RANDOM TECH
   if (message.content === "-randomtech") {
     var random = Math.floor((Math.random() * techs.length) + 1);
-    message.channel.send(random.toString());
+    message.channel.send("You rolled " + technames[random] + "\n" + techs[random]);
   }
+
+  //RC
+  var now = new Date();
+  var delay = 60 * 60 * 1000; // 1 hour in msec
+  var start = delay - (now.getMinutes() * 60 + now.getSeconds()) * 1000 + now.getMilliseconds();
+
+  setTimeout(function doSomething() {
+     // do the operation
+     guildObj.defaultChannel.send("You should do a Reality Check.");
+
+     // schedule the next tick
+     setTimeout(doSomething, delay);
+  }, start);
 
 
 
