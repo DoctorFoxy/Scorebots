@@ -21,7 +21,8 @@ client.on("message", message => {
     -techniques: Shows list of lucid dreaming techniques.
     Use -"technique" without the quotes to see an explanation of that tech.
     -randomtech: Gives you a random tech that you can try out.
-    -fortune: Tells you a fortune of your upcomming night.\`\`\``;
+    -fortune: Tells you a fortune of your upcomming night.
+    -version: Check current version of the bot.\`\`\``;
     message.author.sendMessage(helpmenu)
   }
   else if (message.content === "-avatar") { //SHOW AVATAR
