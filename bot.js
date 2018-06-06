@@ -7,6 +7,7 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 
 client.on("message", message => {
 
+  //COMMANDS
   if (message.content === "-ping") { //PING-PONG
     message.reply("Pong!")
   }
@@ -25,8 +26,7 @@ client.on("message", message => {
     message.reply(message.author.avatarURL);
   }
   else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
-    var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
-    message.channel.send(techs);
+    message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
   }
 
   //TECHS
@@ -35,13 +35,23 @@ client.on("message", message => {
   mild = `Mnemonically Induced Lucid Dream: MILD is using prospective memory to get lucid.
   MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
   rc = "Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.",
-  wbtb = "",
+  wbtb = "Wake Back To Bed: Waking up for a couple of minutes, then going back to bed increases the chances of lucid dreaming. Use that time to read about lucid dreaming or plan your dreams.",
   deild = "",
   dild = "";
 
-  else if (message.content === "-wild" || message.content === "-WILD") {
+  var technames = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
+  var techs = [wild, fild, mild, rc, wbtb, deild, dild];
+
+  var i;
+  for (i = 0; i < techs.length; i++) {
+    if (message.content === technames[i]) {
+      message.channel.send(techs[i])
+    }
 
   }
+
+  //CONTINUE COMMANDS
+  
 
 
 
