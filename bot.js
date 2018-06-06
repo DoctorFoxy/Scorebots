@@ -5,16 +5,17 @@ client.on('ready', () => { // BOT READY NOTIFICATION
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+client.on('message', message);
+function message() {
     var text = str.toLowerCase(message.content);
-    
-    if (text === '-ping') {
-    	message.reply('pong');
-  	}
+
+    if (text === '-ping') { //PING - PONG
+    message.reply('pong');
+    }
+
+}
 
 
-
-    
 });
 
 client.on('message', message => { //HELP MENU
