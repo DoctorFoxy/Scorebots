@@ -37,8 +37,8 @@ client.on("message", message => {
 MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
   rc = "Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.",
   wbtb = "Wake Back To Bed: Waking up for a couple of minutes, then going back to bed increases the chances of lucid dreaming. Use that time to read about lucid dreaming or plan your dreams.",
-  deild = "",
-  dild = "";
+  deild = "Dream-Exit Induced Lucid Dream: Waking up from a dream and then falling back asleep to re-enter it.",
+  dild = "Dream Initiated Lucid Dream: Realize you are dreaming from within a dream.";
 
   var technames = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
   var techs = [wild, fild, mild, rc, wbtb, deild, dild];
