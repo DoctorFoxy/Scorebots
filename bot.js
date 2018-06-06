@@ -22,7 +22,8 @@ client.on("message", message => {
     Use -"technique" without the quotes to see an explanation of that tech.
     -randomtech: Gives you a random tech that you can try out.
     -fortune: Tells you a fortune of your upcomming night.
-    -version: Check current version of the bot.\`\`\``;
+    -version: Check current version of the bot.
+    -frank: Gives you an overview of Franks life.\`\`\``;
     message.author.sendMessage(helpmenu)
   }
   else if (message.content === "-avatar") { //SHOW AVATAR
