@@ -24,14 +24,15 @@ client.on("message", message => {
   else if (message.content === "-avatar") { //SHOW AVATAR
     message.reply(message.author.avatarURL);
   }
-  else if (message.content === "-techniques" || "-techs" || "-tech") { //SHOW ALL TECHS
-    var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
-    message.channel.send(techs);
-  }
+  //else if (message.content === "-techniques" || "-techs" || "-tech") { //SHOW ALL TECHS
+    //var techs = "```wild, fild, mild, rc, wbtb, deild, dild```"
+    //message.channel.send(techs);
+  //}
 
 
 
 
 });
 
+//LOGIN
 client.login(process.env.BOT_TOKEN);
