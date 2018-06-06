@@ -6,16 +6,17 @@ client.on('ready', () => { // BOT READY NOTIFICATION
 });
 
 client.on('message', message => { //PING - PONG
-    if (message.content === '-ping') {
+    message = message.content(str.toLowerCase(message));
+    if (message === '-ping') {
     	message.reply('pong');
-  	}   
+  	}
 });
 
 client.on('message', message => { //HELP MENU
     if (message.content === '-help') {
         var helpmenu = "```\nThis is the help menu for MoonBot:\n-help: Shows this menu.\n-ping: Replies pong.\n-avatar: Gives you the link to your avatar.\n-techniques: Shows list of lucid dreaming techniques.\nUse -\"technique\" without the quotes to see an explanation of that tech. ```";
     	message.author.sendMessage(helpmenu)
-  	}   
+  	}
 });
 
 client.on('message', message => { // AVATAR COMMAND
@@ -64,5 +65,3 @@ client.on('message', message => { // RC
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
-
-
