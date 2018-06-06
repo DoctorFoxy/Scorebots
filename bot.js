@@ -29,6 +29,20 @@ client.on("message", message => {
     message.channel.send(techs);
   }
 
+  //TECHS
+  var wild = "Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.",
+  fild = "Finger Induced Lucid Dream: Similar to a WILD but you use finger motions to preserve your conscious/awareness as you fall asleep.",
+  mild = `Mnemonically Induced Lucid Dream: MILD is using prospective memory to get lucid.
+  MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
+  rc = "Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.",
+  wbtb = "",
+  deild = "",
+  dild = "";
+
+  else if (message.content === "-wild" || message.content === "-WILD") {
+
+  }
+
 
 
 
