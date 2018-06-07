@@ -9,18 +9,6 @@ client.on("message", message => {
   text = message.content;
   if (message.channel.send(text[0]) === "-"); 
   {
-    //Check the command.
-    var command = "";
-    var x;
-    for (x = 1; x < 15; x++) {
-      if (text[x] == " ") {
-        break;
-      }
-      else {
-        command = command + text[x];
-      }
-    }
-    
     //COMMANDS
     if (message.content === "-ping") { //PING-PONG
       message.reply("Pong!")
@@ -48,9 +36,6 @@ client.on("message", message => {
     }
     else if (message.content === "-frank") {
       message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
-    }
-    else if (message.content === "-test") { //SHOW AVATAR
-      message.reply(command);
     }
   
     //NIGHTFORTUNE
