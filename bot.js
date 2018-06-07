@@ -32,12 +32,6 @@ client.on("message", message => {
   else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
     message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
   }
-
-  //RANDOM TECH
-  if (message.content === "-randomtech") {
-    var random = Math.floor((Math.random() * techs.length) + 1);
-    message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
-  }
   else if (message.content === "-frank") {
     message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
   }
@@ -86,6 +80,11 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
 
   }
 
+  //RANDOM TECH
+  if (message.content === "-randomtech") {
+    var random = Math.floor((Math.random() * techs.length) + 1);
+    message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
+  }
 
 
 
