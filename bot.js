@@ -7,7 +7,7 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 
 client.on("message", message => {
   text = message.content;
-  if (message.channel.send(text[0]) === "-"); 
+  if (message.content(text[0]) === "-"); 
   {
     //COMMANDS
     if (message.content === "-ping") { //PING-PONG
