@@ -35,6 +35,10 @@ client.on("message", message => {
   else if (message.content === "-frank") {
     message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
   }
+  else if (message.content === "-test") {
+    text = message.content;
+    message.channel.send(text[1]);
+  }
 
   //NIGHTFORTUNE
   var fortune = ["You will have a very vivid dream tonight.", "A creepy nightmare awaits you.", "You will have an LD!",
