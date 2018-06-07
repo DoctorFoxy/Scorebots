@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const config = require('./package.json');
 
 client.on("ready", () => { // BOT READY NOTIFICATION
   console.log("I am ready!");
@@ -10,6 +11,9 @@ client.on("message", message => {
   text = message.content;
   if (text[0] === "-"); 
   {
+    var prefix = "-";
+    const args = message.content.slice(prefix.length).trim().split(" ");
+    
     //COMMANDS
     if (message.content === "-ping") { //PING-PONG
       message.reply("Pong!")
