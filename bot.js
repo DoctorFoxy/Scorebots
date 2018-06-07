@@ -6,6 +6,7 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 });
 
 client.on("message", message => {
+  if(message.author.bot) return;
   text = message.content;
   if (text[0] === "-"); 
   {
