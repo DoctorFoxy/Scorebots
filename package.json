@@ -3,6 +3,7 @@
   "description": "A bot about lucid dreaming by DoctorFoxy",
   "version": "1.1.9",
   "main": "bot.js",
+  "prefix": "-",
   "scripts": {
     "start": "node bot.js"
   },
