@@ -11,14 +11,13 @@ client.on("message", message => {
   text = message.content;
   var prefix = config.prefix;
   
-  if (input.split("-")[prefix.length - 1]; === prefix)
+  if (input.split("-")[prefix.length - 1] === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
     
     //COMMANDS
     if (args[0] === "ping") { //PING-PONG
       message.reply("Pong!");
-      message.reply(args[1]);
     }
     else if (message.content === "-help") { //HELP MENU
       var helpmenu = `\`\`\`fix\n
@@ -36,7 +35,13 @@ client.on("message", message => {
       message.author.sendMessage(helpmenu)
     }
     else if (message.content === "-avatar") { //SHOW AVATAR
-      message.channel.send(message.author.avatarURL);
+      var name = arg[1];
+      try {
+        message.channel.send(message.name.avatarURL);
+      }
+      catch {
+        message.channel.send("Invalid arg");
+      }
     }
     else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
       message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
