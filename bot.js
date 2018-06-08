@@ -10,7 +10,7 @@ client.on("message", message => {
   if(message.author.bot) return;
   text = message.content;
   var prefix = pjson.prefix;
-  if (text[0] === prefix); 
+  if (text[0] === "-"); 
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
     
