@@ -9,14 +9,15 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 client.on("message", message => {
   if(message.author.bot) return;
   text = message.content;
-  if (text[0] === "-"); 
+  var prefix = pjson.prefix;
+  if (text[0] === prefix); 
   {
-    var prefix = "-";
     const args = message.content.slice(prefix.length).trim().split(" ");
     
     //COMMANDS
-    if (message.content === "-ping") { //PING-PONG
-      message.reply("Pong!")
+    if (args[0] === "ping") { //PING-PONG
+      message.reply("Pong!");
+      message.reply(args[1]);
     }
     else if (message.content === "-help") { //HELP MENU
       var helpmenu = `\`\`\`fix\n
@@ -61,7 +62,6 @@ client.on("message", message => {
     //REQUEST BOT VERSION
     }
     else if (message.content === "-version") {
-      var pjson = require('./package.json');
       message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + pjson.version + "``");
     }
   
