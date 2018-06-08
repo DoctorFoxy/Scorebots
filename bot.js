@@ -11,7 +11,7 @@ client.on("message", message => {
   text = message.content;
   var prefix = config.prefix;
   
-  if (text[0] === "-")
+  if (input.split("-")[prefix.length - 1]; === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
     
