@@ -9,7 +9,7 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 client.on("message", message => {
   if(message.author.bot) return;
   text = message.content;
-  var prefix = pjson.prefix;
+  var prefix = config.prefix;
   
   if (text[0] === "-")
   {
@@ -63,7 +63,7 @@ client.on("message", message => {
     //REQUEST BOT VERSION
     }
     else if (message.content === "-version") {
-      message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + pjson.version + "``");
+      message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + config.version + "``");
     }
   
     //TECHS
