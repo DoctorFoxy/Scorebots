@@ -15,15 +15,16 @@ client.on("message", message => {
   if (text[0] === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
+    var com = args[0]
     
     //COMMANDS
-    if (args[0] === "ping") { //PING-PONG
+    if (com === "ping") { //PING-PONG
       message.reply("Pong!");
     }
-    else if (message.content === "-help") { //HELP MENU
+    else if (com === "help") { //HELP MENU
       message.author.sendMessage(reply.help);
     }
-    else if (message.content === "-avatar") { //SHOW AVATAR
+    else if (com === "avatar") { //SHOW AVATAR
       var name = arg[1];
       try {
         message.channel.send(message.name.avatarURL);
@@ -32,10 +33,10 @@ client.on("message", message => {
         message.channel.send("Invalid arg");
       }
     }
-    else if (message.content === "-techniques" || message.content === "-techs" || message.content === "-tech") { //SHOW ALL TECHS
+    else if (com === "techniques" || com === "techs" || com === "tech") { //SHOW ALL TECHS
       message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
     }
-    else if (message.content === "-frank") {
+    else if (com === "frank") {
       message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
     }
   
@@ -45,7 +46,7 @@ client.on("message", message => {
                   "A crazy dream awaits you.", "Nothing better than waking uping refreshed.", "A boring night awaits you.", "You will wake up having to pee...",
                   "Golden ticket: The next technique you try will work 100%!!", "You will talk to a dragon in your dream."];
   
-    if (message.content === "-fortune") {
+    if (com === "fortune") {
       var random2 = Math.floor((Math.random() * 12) + 1);
       var easter = Math.floor((Math.random() * 120) + 1);
       if (easter == 120) {
@@ -56,7 +57,7 @@ client.on("message", message => {
       }
     //REQUEST BOT VERSION
     }
-    else if (message.content === "-version") {
+    else if (com === "version") {
       message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + config.version + "``");
     }
   
@@ -83,7 +84,7 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
     }
   
     //RANDOM TECH
-    if (message.content === "-randomtech") {
+    if (com === "randomtech") {
       var random = Math.floor((Math.random() * techs.length) + 1);
       message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
     }
