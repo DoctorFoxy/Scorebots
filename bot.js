@@ -25,13 +25,7 @@ client.on("message", message => {
       message.author.sendMessage(reply.help);
     }
     else if (com === "avatar") { //SHOW AVATAR
-      var name = arg[1];
-      try {
-        message.channel.send(name.avatarURL);
-      }
-      catch(err) {
-        message.channel.send("Invalid arg");
-      }
+      message.channel.send(message.author.avatarURL);
     }
     else if (com === "techniques" || com === "techs" || com === "tech") { //SHOW ALL TECHS
       message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
