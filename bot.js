@@ -50,15 +50,15 @@ client.on("message", message => {
       message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + config.version + "``");
     }
 	
-	//TECHS
-	var techs = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
-	var x;
-	var length = techs.length;
-	for (x = 0; x < length; x++) {
-	  if (com === String(techs[x])) {
-		  message.channel.send(eval("reply.dreams." + String(techs[x])));
-	  }
-	}
+    //TECHS
+    var techs = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
+    var x;
+    var length = techs.length;
+    for (x = 0; x < length; x++) {
+       if (com === String(techs[x])) {
+	  message.channel.send(eval("reply.dreams." + String(techs[x])));
+       }
+    }
 	
     //RANDOM TECH
     if (com === "randomtech") {
