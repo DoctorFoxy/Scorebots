@@ -21,19 +21,7 @@ client.on("message", message => {
       message.reply("Pong!");
     }
     else if (message.content === "-help") { //HELP MENU
-      var helpmenu = `\`\`\`fix\n
-      This is the help menu for MoonBot:
-      ==================================
-      -help: Shows this menu.
-      -ping: Replies pong.
-      -avatar: Gives you the link to your avatar.
-      -techniques: Shows list of lucid dreaming techniques.
-      Use -"technique" without the quotes to see an explanation of that tech.
-      -randomtech: Gives you a random tech that you can try out.
-      -fortune: Tells you a fortune of your upcomming night.
-      -version: Check current version of the bot.
-      -frank: Gives you an overview of Franks life.\`\`\``;
-      message.author.sendMessage(helpmenu)
+      message.author.sendMessage(reply.help);
     }
     else if (message.content === "-avatar") { //SHOW AVATAR
       var name = arg[1];
