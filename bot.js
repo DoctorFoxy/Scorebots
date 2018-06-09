@@ -35,11 +35,6 @@ client.on("message", message => {
     }
   
     //NIGHTFORTUNE
-    var fortune = ["You will have a very vivid dream tonight.", "A creepy nightmare awaits you.", "You will have an LD!",
-                  "You will sleep very deep and well tonight.", "You will struggle to fall asleep.", "You wont have any dream tonight ;(",
-                  "A crazy dream awaits you.", "Nothing better than waking uping refreshed.", "A boring night awaits you.", "You will wake up having to pee...",
-                  "Golden ticket: The next technique you try will work 100%!!", "You will talk to a dragon in your dream."];
-  
     if (com === "fortune") {
       var random2 = Math.floor((Math.random() * 12) + 1);
       var easter = Math.floor((Math.random() * 120) + 1);
@@ -47,7 +42,7 @@ client.on("message", message => {
         message.channel.send("EASTER EGG!! You found a magical fox!");
       }
       else {
-        message.channel.send(fortune[random2]);
+        message.channel.send(reply.fortunes[String(random2)]);;
       }
     //REQUEST BOT VERSION
     }
