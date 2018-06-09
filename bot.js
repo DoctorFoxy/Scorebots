@@ -27,7 +27,7 @@ client.on("message", message => {
     else if (com === "avatar") { //SHOW AVATAR
       var name = arg[1];
       try {
-        message.channel.send(message.name.avatarURL);
+        message.channel.send(name.avatarURL);
       }
       catch(err) {
         message.channel.send("Invalid arg");
