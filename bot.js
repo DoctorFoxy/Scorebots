@@ -9,7 +9,8 @@ client.on("ready", () => { // BOT READY NOTIFICATION
 client.on("message", message => {
   if(message.author.bot) return;
   text = message.content;
-  var prefix = config.prefix;
+  //var prefix = config.prefix;
+  prefix = "-";
   
   if (text[0] === prefix)
   {
