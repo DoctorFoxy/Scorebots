@@ -21,7 +21,7 @@ client.on("message", message => {
       message.reply("Pong!");
     }
     else if (message.content === "-help") { //HELP MENU
-      message.author.sendMessage(reply.help);
+      message.author.sendMessage("test");
     }
     else if (message.content === "-avatar") { //SHOW AVATAR
       var name = arg[1];
