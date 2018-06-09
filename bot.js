@@ -16,7 +16,7 @@ client.on("message", message => {
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
     var com = args[0]
-    
+	
     //COMMANDS
     if (com === "ping") { //PING-PONG
       message.reply("Pong!");
@@ -54,33 +54,21 @@ client.on("message", message => {
     else if (com === "version") {
       message.channel.send("``MoonBot, created by DoctorFoxy\nVersion: " + config.version + "``");
     }
-  
-    //TECHS
-    var wild = "Wake Induced Lucid Dream: A technique where you maintain consciousness/awareness while your body falls asleep.",
-    fild = "Finger Induced Lucid Dream: Similar to a WILD but you use finger motions to preserve your conscious/awareness as you fall asleep.",
-    mild = `Mnemonically Induced Lucid Dream: MILD is using prospective memory to get lucid.
-MILD can involve telling yourself to remember being in a dream when in a dream and the process can be used along with visualization of getting lucid inside a dream.`,
-    rc = "Reality Check: A test to establish whether you are in a dream or waking life, can be actively done during the day in hopes that the habit will continue within dreams.",
-    wbtb = "Wake Back To Bed: Waking up for a couple of minutes, then going back to bed increases the chances of lucid dreaming. Use that time to read about lucid dreaming or plan your dreams.",
-    deild = "Dream-Exit Induced Lucid Dream: Waking up from a dream and then falling back asleep to re-enter it.",
-    dild = "Dream Initiated Lucid Dream: Realize you are dreaming from within a dream.";
-  
-    var technames = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
-    var techs = [wild, fild, mild, rc, wbtb, deild, dild];
-    var techlength = techs.length;
-    var i;
-    for (i = 0; i < techlength; i++) {
-      if (message.content === ("-" + technames[i])) {
-        message.channel.send(techs[i]);
-        break;
-      }
-  
-    }
-  
+	
+	//TECHS
+	var techs = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
+	var x;
+	var length = techs.length;
+	for (x = 0; x < length; x++) {
+	  if (com === String(techs[x])) {
+		  message.channel.send(eval("reply.dreams." + String(techs[x])));
+	  }
+	}
+	
     //RANDOM TECH
     if (com === "randomtech") {
-      var random = Math.floor((Math.random() * techs.length) + 1);
-      message.channel.send("You rolled " + technames[random] + "!\n\n" + techs[random]);
+      let random = Math.floor((Math.random() * techs.length) + 1);
+      message.channel.send("You rolled " + String(techs[random]) + "!\n\n" + eval("reply.dreams." + String(techs[random])));
     }
   }
   
@@ -90,4 +78,4 @@ MILD can involve telling yourself to remember being in a dream when in a dream a
 });
 
 //LOGIN
-client.login(process.env.BOT_TOKEN);
+client.login("NDUzNTgwNjk3MjM2NDA2Mjky.Dfg9ww.fxMlFpTfOPSRp-HgpTDcn3n7OMM");
