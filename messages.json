@@ -1,6 +1,6 @@
 {
 	"help": [
-		"fix\n",
+		"```fix\n",
 		"This is the help menu for MoonBot:",
 		"==================================",
 		"-help: Shows this menu.",
