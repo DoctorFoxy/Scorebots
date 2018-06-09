@@ -73,4 +73,4 @@ client.on("message", message => {
 });
 
 //LOGIN
-client.login("NDUzNTgwNjk3MjM2NDA2Mjky.Dfg9ww.fxMlFpTfOPSRp-HgpTDcn3n7OMM");
+client.login("BOTTOKEN");
