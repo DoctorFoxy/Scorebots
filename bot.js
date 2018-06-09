@@ -63,7 +63,7 @@ client.on("message", message => {
     //RANDOM TECH
     if (com === "randomtech") {
       let random = Math.floor((Math.random() * techs.length) + 1);
-      message.channel.send("You rolled " + String(techs[random]) + "!\n\n" + eval("reply.dreams." + String(techs[random])));
+      message.channel.send("You rolled " + String(techs[random]) + "!\n\n" + reply.dreams[String(techs[random])]);
     }
   }
   
