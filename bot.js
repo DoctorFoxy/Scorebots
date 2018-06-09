@@ -73,4 +73,4 @@ client.on("message", message => {
 });
 
 //LOGIN
-client.login("BOTTOKEN");
+client.login(process.env.BOT_TOKEN);
