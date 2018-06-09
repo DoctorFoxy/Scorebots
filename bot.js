@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require('./package.json');
+//const config = require('./package.json');
 
 client.on("ready", () => { // BOT READY NOTIFICATION
   console.log("I am ready!");
