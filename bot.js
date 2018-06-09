@@ -39,7 +39,7 @@ client.on("message", message => {
       try {
         message.channel.send(message.name.avatarURL);
       }
-      catch {
+      catch(err) {
         message.channel.send("Invalid arg");
       }
     }
