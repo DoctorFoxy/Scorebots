@@ -1,5 +1,5 @@
 {
-  "help": `fix\n
+  "help": [`fix\n
       This is the help menu for MoonBot:
       ==================================
       -help: Shows this menu.
@@ -10,7 +10,7 @@
       -randomtech: Gives you a random tech that you can try out.
       -fortune: Tells you a fortune of your upcomming night.
       -version: Check current version of the bot.
-      -frank: Gives you an overview of Franks life.`
+      -frank: Gives you an overview of Franks life.` ]
 
   
 }
