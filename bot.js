@@ -39,10 +39,35 @@ client.on("message", message => {
     else if (com === "techniques" || com === "techs" || com === "tech") { //SHOW ALL TECHS
       message.channel.send("```wild, fild, mild, rc, wbtb, deild, dild```");
     }
-    else if (com === "frank") {
+    else if (com === "frank") { //FRANK COMMAND
       message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
     }
-  
+	//ROCK PAPER SCISSORS:
+	var lose = message.channel.send("You lost."), tie = message.channel.send("Tie!"), win = message.channel.send("You win!");
+	
+	else if (com === "rps") {
+		var randomrps = Math.floor((Math.random() * 3) + 1);
+		if (args[1] == "rock" || args[1] == "r") { //ROCK
+			message.channel.send("ROCK!");
+			if (randomrps == 1) { tie } 
+			if (randomrps == 2) { lose } 
+			if (randomrps == 3) { win } 
+		}
+		else if (args[1] == "paper" || args[1] == "p") { //PAPER
+			message.channel.send("PAPER!");
+			if (randomrps == 1) { win } 
+			if (randomrps == 2) { tie } 
+			if (randomrps == 3) { lose } 
+		}
+		else if (args[1] == "scissors" || args[1] == "s") { //SCISSORS
+			message.channel.send("SCISSORS");
+			if (randomrps == 1) { lose } 
+			if (randomrps == 2) { win } 
+			if (randomrps == 3) { tie } 
+		}
+	}
+	
+	
     //NIGHTFORTUNE
     if (com === "fortune") {
       var random2 = Math.floor((Math.random() * 12) + 1);
