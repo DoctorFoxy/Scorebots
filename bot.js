@@ -26,6 +26,8 @@ client.on("message", message => {
     const args = message.content.slice(prefix.length).trim().split(" ");
     var com = args[0]
 	
+	var random;
+	
     //COMMANDS
     if (com === "ping") { //PING-PONG
       message.reply("Pong!");
@@ -42,6 +44,10 @@ client.on("message", message => {
     else if (com === "frank") { //FRANK COMMAND
       message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
     }
+	else if (com === "8ball") { //8-BALL
+		random = Math.floor((Math.random() * 20) + 1);
+		message.channel.send(reply.eightball[String(random)]);
+    }
 	
 	//ROCK PAPER SCISSORS:
 	var sendm = "message.channel.send"
@@ -49,34 +55,34 @@ client.on("message", message => {
 	rock = sendm + "(\"ROCK!\")", paper = sendm + "(\"PAPER!\")", scissors = sendm + "(\"SCISSORS!\")";
 	
 	if (com === "rps") {
-		var randomrps = Math.floor((Math.random() * 3) + 1);
+		random = Math.floor((Math.random() * 3) + 1);
 		if (args[1] == "rock" || args[1] == "r") { //ROCK
-			if (randomrps == 1) { eval(rock); eval(tie); } 
-			if (randomrps == 2) { eval(paper); eval(lose); } 
-			if (randomrps == 3) { eval(scissors); eval(win); } 
+			if (random == 1) { eval(rock); eval(tie); } 
+			if (random == 2) { eval(paper); eval(lose); } 
+			if (random == 3) { eval(scissors); eval(win); } 
 		}
 		else if (args[1] == "paper" || args[1] == "p") { //PAPER
-			if (randomrps == 1) { eval(rock); eval(win); } 
-			if (randomrps == 2) { eval(paper); eval(tie); } 
-			if (randomrps == 3) { eval(scissors); eval(lose); } 
+			if (random == 1) { eval(rock); eval(win); } 
+			if (random == 2) { eval(paper); eval(tie); } 
+			if (random == 3) { eval(scissors); eval(lose); } 
 		}
 		else if (args[1] == "scissors" || args[1] == "s") { //SCISSORS
-			if (randomrps == 1) { eval(rock); eval(lose); } 
-			if (randomrps == 2) { eval(paper); eval(win); } 
-			if (randomrps == 3) { eval(scissors); eval(tie); } 
+			if (random == 1) { eval(rock); eval(lose); } 
+			if (random == 2) { eval(paper); eval(win); } 
+			if (random == 3) { eval(scissors); eval(tie); } 
 		}
 	}
 	
 	
     //NIGHTFORTUNE
     if (com === "fortune") {
-      var random2 = Math.floor((Math.random() * 12) + 1);
+      random = Math.floor((Math.random() * 12) + 1);
       var easter = Math.floor((Math.random() * 120) + 1);
       if (easter == 120) {
         message.channel.send("EASTER EGG!! You found a magical fox!");
       }
       else {
-        message.channel.send(reply.fortunes[String(random2)]);;
+        message.channel.send(reply.fortunes[String(random)]);
       }
     //REQUEST BOT VERSION
     }
@@ -96,7 +102,7 @@ client.on("message", message => {
 	
     //RANDOM TECH
     if (com === "randomtech") {
-      let random = Math.floor((Math.random() * techs.length) + 1);
+      random = Math.floor((Math.random() * techs.length) + 1);
       message.channel.send("You rolled " + String(techs[random]) + "!\n\n" + reply.dreams[String(techs[random])]);
     }
   }
