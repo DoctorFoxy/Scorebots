@@ -36,7 +36,7 @@ client.on("message", message => {
       message.channel.send("https://cdn.discordapp.com/attachments/434028541785669653/453972807446036501/I-had-a-dream.jpg")
     }
 	else if (com === "8ball") { //8-BALL
-		random = Math.floor((Math.random() * 20) + 1);
+		random = Math.floor((Math.random() * 21) + 1);
 		message.channel.send(reply.eightball[String(random)]);
     }
 	
