@@ -12,7 +12,8 @@
 		"-version: Check current version of the bot.",
 		"-frank: Gives you an overview of Franks life.",
 		"-rps: used like -rps <rock/paper/scissors> without the <>",
-		"-8ball: used like -8ball <question> without the <> and it will answer```"
+		"-8ball: used like -8ball <question> without the <> and it will answer",
+		"-urban (yourword) without the () to give you the definition of that word```"
 	],
 
 	"dreams": {
