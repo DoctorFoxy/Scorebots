@@ -16,14 +16,14 @@ client.on("message", message => {
   if (text[0] === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
-    var com = args[0]
+    var com = args[0];
 	
 	var random;
 	
     //COMMANDS
     if (com === "ping") { //PING-PONG
-      message.reply("Pong!");
-    }
+	  message.reply("Pong!");
+	}
     else if (com === "help") { //HELP MENU
       message.author.sendMessage(reply.help);
     }
@@ -76,16 +76,16 @@ client.on("message", message => {
     var techs = ["wild", "fild", "mild", "rc", "wbtb", "deild", "dild"];
     var x;
     var length = techs.length;
-    for (x = 0; x < length; x++) {
-       if (com === String(techs[x])) {
-	  message.channel.send(eval("reply.dreams." + String(techs[x])));
+    for (x = 0; x < length; x++) { 
+       if (com === techs[x]) {
+		message.channel.send(eval("reply.dreams." + techs[x]));
        }
     }
 	
     //RANDOM TECH
     if (com === "randomtech") {
       random = Math.floor((Math.random() * techs.length) + 1);
-      message.channel.send("You rolled " + String(techs[random]) + "!\n\n" + reply.dreams[String(techs[random])]);
+      message.channel.send("You rolled " + techs[random] + "!\n\n" + reply.dreams[techs[random]]);
     }
   }
   
