@@ -1,5 +1,5 @@
 # MoonBot
-A discord bot about dreaming.
+**A discord bot about dreaming.**
 
 ``Current prefix is set to - but can be changed in procfile.``
 
