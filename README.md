@@ -1,3 +1,3 @@
 # MoonBot
-A discord bot about dreaming.
+A discord bot about dreaming.\n
 ``test``
