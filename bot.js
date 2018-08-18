@@ -13,7 +13,7 @@ client.on("message", message => {
   var text = message.content;
   var prefix = config.prefix;
   
-  if (text[prefix.length] === prefix)
+  if (text[(prefix.length) - 1] === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
     var com = args[0];
