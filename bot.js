@@ -58,7 +58,7 @@ client.on("message", message => {
 	
     //NIGHTFORTUNE
     if (com === "fortune") {
-      random = Math.floor((Math.random() * 12) + 1);
+      random = Math.floor((Math.random() * 13) + 1);
       var easter = Math.floor((Math.random() * 120) + 1);
       if (easter == 120) {
         message.channel.send("EASTER EGG!! You found a magical fox!");
