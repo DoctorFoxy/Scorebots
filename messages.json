@@ -34,13 +34,14 @@
 		"3": "You will have an LD!",
 		"4": "You will sleep very deep and well tonight.",
 		"5": "You will struggle to fall asleep.",
-		"6": "You wont have any dream tonight ;(",
+		"6": "You wont have any dreams tonight ;(",
 		"7": "A crazy dream awaits you.",
 		"8": "Nothing better than waking uping refreshed.",
 		"9": "A boring night awaits you.",
 		"10": "You will wake up having to pee...",
 		"11": "Golden ticket: The next technique you try will work 100%!!",
-		"12": "You will talk to a dragon in your dream."
+		"12": "You will talk to a dragon in your dream.",
+		"13": "Perhaps you're already in a dream?"
 	},
 	
 	"eightball": {
