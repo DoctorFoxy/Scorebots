@@ -13,6 +13,11 @@ client.on("message", message => {
   var text = message.content;
   var prefix = config.prefix;
   
+  if (text.toLowerCase() === "do wbtb") {
+      message.channel.send("DO THEM, DO AS MANY WBTBS AS YOU CAN!!! EVERY MINUTE OF EVERY HOUR!!!");
+  }
+  
+  //Actual commands ahead
   if (text[(prefix.length) - 1] === prefix)
   {
     const args = message.content.slice(prefix.length).trim().split(" ");
@@ -80,10 +85,6 @@ client.on("message", message => {
        if (com === techs[x]) {
 		message.channel.send(eval("reply.dreams." + techs[x]));
        }
-    //Do wbtbs text
-    }
-    if (com.toLowerCase() === "do wbtb") {
-      message.channel.send("DO THEM, DO AS MANY WBTBS AS YOU CAN!!! EVERY MINUTE OF EVERY HOUR!!!");
     }
     //RANDOM TECH
     if (com === "randomtech") {
