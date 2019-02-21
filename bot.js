@@ -82,7 +82,7 @@ client.on("message", message => {
        }
     //Do wbtbs text
     }
-    if (com === "do wbtb") {}
+    if (com.toLowerCase() === "do wbtb") {
       message.channel.send("DO THEM, DO AS MANY WBTBS AS YOU CAN!!! EVERY MINUTE OF EVERY HOUR!!!");
     }
     //RANDOM TECH
