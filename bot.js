@@ -80,8 +80,11 @@ client.on("message", message => {
        if (com === techs[x]) {
 		message.channel.send(eval("reply.dreams." + techs[x]));
        }
+    //Do wbtbs text
     }
-	
+    if (com.toLowerCase() === "do wbtb") {}
+      message.channel.send("DO THEM, DO AS MANY WBTBS AS YOU CAN!!! EVERY MINUTE OF EVERY HOUR!!!");
+    }
     //RANDOM TECH
     if (com === "randomtech") {
       random = Math.floor((Math.random() * techs.length) + 1);
