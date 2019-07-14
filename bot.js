@@ -34,10 +34,6 @@ client.on("message", message => {
     else if (com === "help") { //HELP MENU
       message.author.sendMessage(reply.help);
     }
-    else if (com === "start") { //HELP MENU
-      message.channel.send("Started: " + str(game));
-      game += 1;
-    }
     else if (com === "avatar") { //SHOW AVATAR
       message.channel.send(message.author.avatarURL);
     }
