@@ -35,7 +35,7 @@ client.on("message", message => {
       message.author.sendMessage(reply.help);
     }
     else if (com === "start") { //HELP MENU
-      message.channel.send("test");
+      message.channel.send(String(a));
     }
     else if (com === "avatar") { //SHOW AVATAR
       message.channel.send(message.author.avatarURL);
