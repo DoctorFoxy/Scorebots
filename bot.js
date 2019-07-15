@@ -4,8 +4,6 @@ const config = require('./package.json');
 const reply = require('./messages.json');
 const urban = require("relevant-urban");
 
-var game = 0;
-
 client.on("ready", () => { // BOT READY NOTIFICATION
   console.log("I am ready!");
 });
@@ -35,7 +33,7 @@ client.on("message", message => {
       message.author.sendMessage(reply.help);
     }
     else if (com === "start") { //HELP MENU
-      message.channel.send(String(a));
+      message.channel.send("WIP");
     }
     else if (com === "avatar") { //SHOW AVATAR
       message.channel.send(message.author.avatarURL);
