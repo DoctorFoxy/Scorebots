@@ -33,8 +33,8 @@ client.on("message", message => {
     else if (com === "help") { //HELP MENU
       message.author.sendMessage(reply.help);
     }
-    else if (com === "start") { //HELP MENU
-      message.channel.send(string(storage.id));
+    else if (com === "start") { //TEST
+      message.channel.send(storage.id);
     }
     else if (com === "avatar") { //SHOW AVATAR
       message.channel.send(message.author.avatarURL);
