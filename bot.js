@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('./package.json');
 const reply = require('./messages.json');
-const storage = require('./storage.json');
 const urban = require("relevant-urban");
 
 client.on("ready", () => { // BOT READY NOTIFICATION
@@ -32,9 +31,6 @@ client.on("message", message => {
 	}
     else if (com === "help") { //HELP MENU
       message.author.sendMessage(reply.help);
-    }
-    else if (com === "start") { //TEST
-      message.channel.send(storage.id);
     }
     else if (com === "avatar") { //SHOW AVATAR
       message.channel.send(message.author.avatarURL);
