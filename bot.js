@@ -27,7 +27,7 @@ client.on("message", message => {
 	
     //COMMANDS
     if (com === "ping") {
-      message.channel.reply("PONG!");
+      message.channel.send("PONG!");
     }
 	  
     if (com === "update") {
