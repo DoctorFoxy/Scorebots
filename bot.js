@@ -31,7 +31,7 @@ client.on("message", message => {
     }
 	  
     if (com === "update") {
-      message.channel.send("You rolled " + com + args[1]);
+      message.channel.send("You rolled " + " " + args[1] + " " + args[2]);
     }
   }
   
