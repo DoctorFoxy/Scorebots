@@ -1,9 +1,9 @@
 {
-  "name": "MoonBot",
-  "description": "A bot about lucid dreaming by DoctorFoxy",
-  "version": "1.2.1",
+  "name": "Scorebots",
+  "description": "A bot for leaderboards by DoctorFoxy",
+  "version": "1.0",
   "main": "bot.js",
-  "prefix": "-",
+  "prefix": "*",
   "scripts": {
     "start": "node bot.js"
   },
