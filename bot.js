@@ -28,6 +28,8 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
       message.channel.send("PONG!");
+
+      client.channels.find("score-logs", channelName).send("test")
     }
 	  
     if (com === "update") {
