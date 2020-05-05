@@ -26,8 +26,12 @@ client.on("message", message => {
 	var random;
 	
     //COMMANDS
+    if (com === "ping") {
+      message.channel.reply("PONG!");
+    }
+	  
     if (com === "update") {
-      message.channel.send("You rolled " + com + args);
+      message.channel.send("You rolled " + com + args[1]);
     }
   }
   
