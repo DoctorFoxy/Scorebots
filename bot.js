@@ -24,8 +24,8 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
       message.channel.send("PONG!");
-
-      client.channels.get(`706575362125201438`).send(`Text`)
+	
+      client.channels.get(`706575362125201438`).send(args[1] + ":\n" + "Attempts: " + args[2] + "\n" + "Success: " + args[3] + "\n" + "Score: " + toString(parseInt(args[2])*(parseInt(args[3]+1)));
     }
 	  
     if (com === "update") {
