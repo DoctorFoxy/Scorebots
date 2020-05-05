@@ -25,7 +25,7 @@ client.on("message", message => {
     if (com === "ping") {
       message.channel.send("PONG!");
 
-      client.channels.find("score-logs", channelName).send("test")
+      client.channels.get(`706575362125201438`).send(`Text`)
     }
 	  
     if (com === "update") {
