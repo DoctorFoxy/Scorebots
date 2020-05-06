@@ -28,10 +28,10 @@ client.on("message", message => {
    
 	  
     if (com === "update") {
-      var comment = "";
+      var comment = "(";
       var i;
       for (i = 2; i < (args.length-2); i++) {
-      	comment += args[i];
+      	comment += (args[i] + " ");
       }    
       
       if (comment == "") {
