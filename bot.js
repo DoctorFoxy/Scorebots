@@ -26,7 +26,7 @@ client.on("message", message => {
     }
 	  
     if (com === "update") {
-      client.channels.get(`706575362125201438`).send(args[1] + ":\n" + "Attempts: " + args[2] + "\n" + "Success: " + args[3] + "\n" + "Score: " + args[4] + "\n---");
+      client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[2] + "\n" + "Success: " + args[3] + "\n" + "Score: " + args[4] + "\n---");
     }
   }
   
