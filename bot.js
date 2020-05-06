@@ -25,11 +25,25 @@ client.on("message", message => {
       console.log("Pong");
 
     }
+   
 	  
     if (com === "update") {
+      var comment = "";
+      var i;
+      for (i = 2; i < (args.length-2); i++) {
+      	comment += args[i];
+      }    
+      
+      if (comment == "") {
       message.channel.send("Updated.");
       client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
+      } else {
+      message.channel.send("Updated.");
+      client.channels.get(`706575362125201438`).send("---\n" + args[1] + ": (" + comment + ")\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
+      }
+      
       console.log("Updated:" + args[1]);
+      
     }
 
   }
