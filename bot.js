@@ -19,8 +19,6 @@ client.on("message", message => {
     const args = message.content.slice(prefix.length).trim().split(" ");
     var com = args[0];
 	
-	var random;
-	
     //COMMANDS
     if (com === "ping") {
       message.channel.send("PONG!");
