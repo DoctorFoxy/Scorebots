@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('./package.json');
-const fs = require('fs') 
 
 client.on("ready", () => { // BOT READY NOTIFICATION
   console.log("I am ready!");
@@ -22,15 +21,7 @@ client.on("message", message => {
     if (com === "ping") {
 	message.channel.send("PONG!");
 	console.log("Pong");
-	    
-	let data = "Learning how to write in a file."
-  
-	// Write data in 'Output.txt' . 
-	fs.writeFile('Fox.txt', data, (err) => { 
-      
-    	// In case of a error throw err. 
-    	if (err) throw err; 
-	}) 
+	   
     }
    
 	  
