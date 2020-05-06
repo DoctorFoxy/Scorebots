@@ -20,9 +20,17 @@ client.on("message", message => {
 	
     //COMMANDS
     if (com === "ping") {
-      message.channel.send("PONG!");
-      console.log("Pong");
-
+	message.channel.send("PONG!");
+	console.log("Pong");
+	    
+	let data = "Learning how to write in a file."
+  
+	// Write data in 'Output.txt' . 
+	fs.writeFile('Fox.txt', data, (err) => { 
+      
+    	// In case of a error throw err. 
+    	if (err) throw err; 
+	}) 
     }
    
 	  
