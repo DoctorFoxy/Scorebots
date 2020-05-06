@@ -34,7 +34,7 @@ client.on("message", message => {
       	comment += (args[i] + " ");
       }    
       
-      if (comment == "") {
+      if (comment == "(") {
       message.channel.send("Updated.");
       client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
       } else {
