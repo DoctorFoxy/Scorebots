@@ -40,7 +40,8 @@ client.on("message", message => {
       var comment = "";
       var i;
       for (i = 2; i < (args.length-2); i++) {
-      	comment += (args[i] + " ");
+	      
+      	if (args[i].charAt(0)) != "+") {comment += (args[i] + " ");}
      }    
       
      if (comment == "") {
