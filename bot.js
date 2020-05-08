@@ -22,7 +22,7 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	message.reply(":ocean: Pong! :ocean:" + message.author.id);
+	message.reply(":ocean: Pong! :ocean:");
 	
     }
 	  
@@ -52,10 +52,24 @@ client.on("message", message => {
 	 message.channel.sendEmbed(Embed)
     }
      if (com === "update") {
-	     //var edited;
-	     //if (args[1] == "
-	     
-	     
+	     var edited = "";
+	     var playerid = message.author.id;
+	     if (playerid == "189786007506255883") {
+		edited = "708358626582069268"
+	     } else if (playerid == "187960055260250112") {
+	        edited = "708358675860815983"
+    	     } else if (playerid == "226077876913438721") {
+	        edited = "708358686422073425"
+    	     } else if (playerid == "348275781526487054") {
+	        edited = "708358695951794188"
+    	     } else if (playerid == "268775349725167626") {
+	        edited = "708358709465710612"
+    	     } else if (playerid == "367246381678592012") {
+	        edited = "708358722925232199"
+    	     } else (playerid == "378270588218638336") {
+	        edited = "708358729447374859"
+    	     }
+			
 	     
 	     
 	     
@@ -99,7 +113,11 @@ client.on("message", message => {
       
 	     
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
-	     
+      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit(Embed);
+      });
 	     
       } else {
       message.channel.send(":white_check_mark: Updated: " + args[1]);
@@ -118,8 +136,15 @@ client.on("message", message => {
         .setTimestamp()
       
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
+      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit(Embed);
+        });
      }
       
+	    
+	     
      console.log("Updated: " + args[1]);
       
     }
