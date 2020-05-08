@@ -26,12 +26,22 @@ client.on("message", message => {
 
     }
 	  
-	 if (com === "secret") {
+    if (com === "secret") {
 	console.log("Secret");
 	client.channels.get(`708356276144570388`).send("Test");
-
     }
-   if (com === "help") {
+	  
+     if (com === "secret2") {
+	console.log("Secret2");
+	client.channels.get(`708356276144570388`).fetchMessages({around: "708358626582069268", limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit("TESTING SUCCESS");
+        });
+    }
+	  
+	  
+    if (com === "help") {
 	console.log("Helped: " + args[1]);
 	const Embed = new Discord.RichEmbed()
 	.setTitle("Help:")
