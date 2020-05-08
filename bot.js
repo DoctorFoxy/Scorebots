@@ -32,7 +32,7 @@ client.on("message", message => {
 	.setTitle("Help:")
 	.setDescription("**Use the bot as following:**\n\n**!update (name) (possible comments) (attempts) (successes)**")
 	.setTimestamp()
-	.setFooter(message.author.name, message.author.avatarURL);
+	.setFooter(message.author.username, message.author.avatarURL);
 	
 	 message.channel.sendEmbed(Embed)
     }
