@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('./package.json');
 
@@ -24,7 +24,7 @@ client.on("message", message => {
 	message.channel.send("PONG!");
 	console.log("Pong");
 	    
-	const embed = new discord.RichEmbed();
+	const embed = new Discord.RichEmbed();
 	embed.setAuthor(message.author.username, message.author.displayAvatarURL);
 	message.channel.send(embed);
     }
