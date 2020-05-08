@@ -22,10 +22,20 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	   
+	message.channel.send("PONG!");
+
     }
-   
-	  
+ 
+   if (com === "help") {
+	console.log("Helped: " + args[1]);
+	const Embed = new Discord.RichEmbed()
+	.setTitle("Help:")
+	.setDescription("Use the bot as following:\n!update (name) (possible comments) (attempts) (successes)")
+	.setTimestamp()
+	.setFooter(args[1], message.author.avatarURL);
+	
+	 message.channel.sendEmbed(Embed)
+    }
      if (com === "update") {
       var comment = "";
       var i;
