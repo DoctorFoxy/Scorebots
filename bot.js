@@ -37,6 +37,10 @@ client.on("message", message => {
 	 message.channel.sendEmbed(Embed)
     }
      if (com === "update") {
+      if (args[(args.length-3)].charAt(1)*1 > 0) {
+      	 message.channel.send("Lets go! you succesfully had: "  + args[(args.length-3)] + " WILDS!!\n");
+      }	     
+
       var comment = "";
       var i;
       for (i = 2; i < (args.length-2); i++) {
