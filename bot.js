@@ -23,6 +23,10 @@ client.on("message", message => {
     if (com === "ping") {
 	message.channel.send("PONG!");
 	console.log("Pong");
+	    
+	const embed = new discord.RichEmbed();
+	embed.setAuthor(message.author.username, message.author.displayAvatarURL);
+	message.channel.send(embed);
     }
    
 	  
@@ -34,7 +38,7 @@ client.on("message", message => {
      }    
       
      if (comment == "(") {
-      message.channel.send("Updated.");
+      message.channel.send("Updated: " + message.author.username);
       client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
       } else {
       message.channel.send("Updated.");
