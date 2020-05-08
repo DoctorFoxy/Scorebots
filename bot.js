@@ -56,9 +56,17 @@ client.on("message", message => {
 	     
       message.channel.send(":white_check_mark: Updated: " + args[1]);
      
+	     var plus1 = args[(args.length-2)];
+	      var temping1 = args[(args.length-4)];
+	      if (temping1.charAt(0) == "+") { var plus1 = plus1 + " (" + args[(args.length-4)] + ")"; }
+	      
+	      var plus2 = args[(args.length-1)];
+	      var temping2 = args[(args.length-3)];
+	      if (temping2.charAt(0) == "+") { var plus2 = plus2 + " (" + args[(args.length-3)] + ")"; }
+	     
       const Embed = new Discord.RichEmbed()
 	.setTitle(args[1])
-	.setDescription("Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
+	.setDescription("Attempts: " + plus1 + "\n" + "Success: " + plus2 + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
         .setThumbnail(message.author.avatarURL)
         .setTimestamp()
       
