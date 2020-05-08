@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('./package.json');
 
+
+
 client.on("ready", () => { // BOT READY NOTIFICATION
   console.log("I am ready!");
 });
@@ -21,11 +23,6 @@ client.on("message", message => {
     if (com === "ping") {
 	message.channel.send("PONG!");
 	console.log("Pong");
-	    
-	var exampleEmbed = new Discord.MessageEmbed()
-	.setTitle('Some title');
-
-	message.channel.send(exampleEmbed);
     }
    
 	  
@@ -38,7 +35,7 @@ client.on("message", message => {
       
      if (comment == "(") {
       message.channel.send("Updated.");
-      client.channels.get(`706575362125201438`).send("---\n" + message.author.avatarURL + "\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
+      client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
       } else {
       message.channel.send("Updated.");
       client.channels.get(`706575362125201438`).send("---\n" + args[1] + ": " + comment + ")\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
