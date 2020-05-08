@@ -116,7 +116,7 @@ client.on("message", message => {
       client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
         	.then(msg => {
         	const fetchedMsg = msg.first();
-        	fetchedMsg.edit(Embed);
+        	fetchedMsg.editEmbed(Embed);
       });
 	     
       } else {
@@ -139,7 +139,7 @@ client.on("message", message => {
       client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
         	.then(msg => {
         	const fetchedMsg = msg.first();
-        	fetchedMsg.edit(Embed);
+        	fetchedMsg.editEmbed(Embed);
         });
      }
       
