@@ -66,7 +66,7 @@ client.on("message", message => {
 	        edited = "708358709465710612"
     	     } else if (playerid == "367246381678592012") {
 	        edited = "708358722925232199"
-    	     } else (playerid == "378270588218638336") {
+    	     } else if (playerid == "378270588218638336") {
 	        edited = "708358729447374859"
     	     }
 			
