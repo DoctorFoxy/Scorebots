@@ -30,7 +30,7 @@ client.on("message", message => {
 	console.log("Helped: " + args[1]);
 	const Embed = new Discord.RichEmbed()
 	.setTitle("Help:")
-	.setDescription("**Use the bot as following:**\n\n**!update (name) (optional: comments) (optional: +attempts) (optional:(successes) (attempts) (successes)**")
+	.setDescription("**Commands:**\n**-update**\n**!update (name) (optional: comments) (optional: +attempts) (optional:(successes) (attempts) (successes)**\n\n**-help**\n**Brings this menu to see all commands.**\n\n**-ping**\n**Pings the bot to see whether it is online.**")
 	.setTimestamp()
 	.setFooter(message.author.username, message.author.avatarURL);
 	
