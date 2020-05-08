@@ -1,5 +1,5 @@
-const discord = require("discord.js");
-const client = new discord.Client();
+const Discord = require("discord.js");
+const client = new Discord.Client();
 const config = require('./package.json');
 
 
@@ -23,11 +23,10 @@ client.on("message", message => {
     if (com === "ping") {
 	console.log("Pong");
 	    
-	const exampleEmbed = new discord.MessageEmbed()
-	.setColor('#0099ff')
-	.setTitle('Some title')
+	const Embed = new Discord.RichEmbed()
+	.setDescription("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---")
 	
-	message.channel.send(exampleEmbed);
+	message.channel.sendEmbed(Embed);
     }
    
 	  
