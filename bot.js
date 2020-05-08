@@ -44,6 +44,10 @@ client.on("message", message => {
      }    
       
      if (comment == "") {
+	     var temping = args[(args.length-4)]
+	     if (temping.charAt(0) == "+") {
+		     
+	     } else {
       message.channel.send(":white_check_mark: Updated: " + args[1]);
      
       const Embed = new Discord.RichEmbed()
@@ -51,7 +55,8 @@ client.on("message", message => {
 	.setDescription("Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
         .setThumbnail(message.author.avatarURL)
         .setTimestamp()
-      
+      }
+	     
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
 	     
 	     
