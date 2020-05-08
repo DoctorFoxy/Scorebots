@@ -22,7 +22,7 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	message.reply(":ocean: Pong! :ocean:" + message.member.id);
+	message.reply(":ocean: Pong! :ocean:" + message.author.id);
 	
     }
 	  
