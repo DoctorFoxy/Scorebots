@@ -40,7 +40,7 @@ client.on("message", message => {
 	.setTitle(args[1])
 	.setDescription("Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
 	.setTimestamp()
-        .setFooter(args[1], message.author.avatarURL);
+        .setImage(message.author.avatarURL)
       
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
 	     
@@ -52,7 +52,7 @@ client.on("message", message => {
 	.setTitle(args[1])
 	.setDescription("Comment: " + comment + "\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
 	.setTimestamp()
-      	.setFooter(args[1], message.author.avatarURL);
+      	.setImage(message.author.avatarURL)
       
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
      }
