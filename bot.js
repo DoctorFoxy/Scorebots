@@ -30,7 +30,7 @@ client.on("message", message => {
 	console.log("Helped: " + args[1]);
 	const Embed = new Discord.RichEmbed()
 	.setTitle("Help:")
-	.setDescription("Use the bot as following:\n!update (name) (possible comments) (attempts) (successes)")
+	.setDescription("**Use the bot as following:**\n\n**!update (name) (possible comments) (attempts) (successes)**")
 	.setTimestamp()
 	.setFooter(args[1], message.author.avatarURL);
 	
