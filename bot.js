@@ -25,7 +25,12 @@ client.on("message", message => {
 	message.reply(":ocean: Pong! :ocean:");
 
     }
- 
+	  
+	 if (com === "secret") {
+	console.log("Secret");
+	client.channels.get(`708356276144570388`).send("Test");
+
+    }
    if (com === "help") {
 	console.log("Helped: " + args[1]);
 	const Embed = new Discord.RichEmbed()
