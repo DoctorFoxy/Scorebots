@@ -42,7 +42,7 @@ client.on("message", message => {
         .setThumbnail(message.author.avatarURL)
         .setTimestamp()
       
-      client.channels.get(`706575362125201438`).sendEmbed(Embed);
+      client.channels.get(`706575362125201438`).send(Embed);
 	     
 	     
       } else {
@@ -54,7 +54,7 @@ client.on("message", message => {
       	.setThumbnail(message.author.avatarURL)
         .setTimestamp()
       
-      client.channels.get(`706575362125201438`).sendEmbed(Embed);
+      client.channels.get(`706575362125201438`).send(Embed);
      }
       
      console.log("Updated: " + args[1]);
