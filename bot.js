@@ -22,7 +22,7 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	message.reply("Pong! :discordemojistumblrdiscordcustom:");
+	message.reply(":ocean: Pong! :ocean:");
 
     }
  
