@@ -31,6 +31,15 @@ client.on("message", message => {
 	client.channels.get(`708356276144570388`).send("Test");
     }
 	  
+	   if (com === "secret2") {
+	console.log("Secret2");
+	client.channels.get(`708356276144570388`).fetchMessages({around: "708358626582069268", limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit("**WELCOME TO #LATEST-SCORES**\nhttps://cdn.discordapp.com/attachments/707336891959214182/707338139785494599/cooltext356649610228793.png");
+        });  
+    }
+	  
 	  
     if (com === "help") {
 	console.log("Helped: " + args[1]);
@@ -46,7 +55,7 @@ client.on("message", message => {
 	     var edited = "";
 	     var playerid = message.author.id;
 	     if (playerid == "189786007506255883") {
-		edited = "708358626582069268"
+		edited = "708367245398769756"
 	     } else if (playerid == "187960055260250112") {
 	        edited = "708358675860815983"
     	     } else if (playerid == "226077876913438721") {
