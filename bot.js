@@ -62,11 +62,11 @@ client.on("message", message => {
       message.channel.send(":white_check_mark: Updated: " + args[1]);
 	      var plus1 = args[(args.length-2)];
 	      var temping1 = args[(args.length-4)];
-	      if (temping1.charAt(0) == "+") { var plus1 = plus1 + " " + args[(args.length-4)]; }
+	      if (temping1.charAt(0) == "+") { var plus1 = plus1 + " (" + args[(args.length-4)] + ")"; }
 	      
 	      var plus2 = args[(args.length-1)];
 	      var temping2 = args[(args.length-3)];
-	      if (temping2.charAt(0) == "+") { var plus2 = plus2 + " " + args[(args.length-3)]; }
+	      if (temping2.charAt(0) == "+") { var plus2 = plus2 + " (" + args[(args.length-3)] + ")"; }
 	      
       const Embed = new Discord.RichEmbed()
 	.setTitle(args[1])
