@@ -24,8 +24,8 @@ client.on("message", message => {
 	console.log("Pong");
 	    
 	const Embed = new Discord.RichEmbed()
-	.setDescription("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---")
-	
+	.setDescription("Name: " + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---")
+	.setFooter(args[1], message.author.avatarURL);
 	message.channel.sendEmbed(Embed);
     }
    
