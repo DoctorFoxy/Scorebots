@@ -21,6 +21,11 @@ client.on("message", message => {
     if (com === "ping") {
 	message.channel.send("PONG!");
 	console.log("Pong");
+	var member = message.mentions.first();
+    	let embed = new Discord.RichEmbed()
+	  .setImage(member.avatarURL)
+ 	  .setColor('#275BF0')
+   	message.channel.send(embed)
 	   
     }
    
