@@ -22,29 +22,37 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	    
-	const Embed = new Discord.RichEmbed()
-	.setTitle(args[1])
-	.setDescription("Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
-	.setImage(message.author.avatarURL)
-	.setFooter(args[1], message.author.avatarURL);
-	message.channel.sendEmbed(Embed);
+	   
     }
    
 	  
      if (com === "update") {
-      var comment = "(";
+      var comment = "";
       var i;
       for (i = 2; i < (args.length-2); i++) {
       	comment += (args[i] + " ");
      }    
       
-     if (comment == "(") {
-      message.channel.send("Updated: " + args[1] + ".");
-      client.channels.get(`706575362125201438`).send("---\n" + args[1] + ":\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
+     if (comment == "") {
+      message.channel.send(":white_check_mark: Updated: " + args[1]);
+     
+      const Embed = new Discord.RichEmbed()
+	.setTitle(args[1])
+	.setDescription("Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
+	.setImage(message.author.avatarURL)
+      
+      client.channels.get(`706575362125201438`).sendEmbed(Embed);
+	     
+	     
       } else {
-      message.channel.send("Updated.");
-      client.channels.get(`706575362125201438`).send("---\n" + args[1] + ": " + comment + ")\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n---");
+      message.channel.send(":white_check_mark: Updated: " + args[1]);
+	      
+      const Embed = new Discord.RichEmbed()
+	.setTitle(args[1])
+	.setDescription("Comment: " + comment + "\n" + "Attempts: " + args[(args.length-2)] + "\n" + "Success: " + args[(args.length-1)] + "\n" + "Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "\n**---**")
+	.setImage(message.author.avatarURL)
+      
+      client.channels.get(`706575362125201438`).sendEmbed(Embed);
      }
       
      console.log("Updated: " + args[1]);
