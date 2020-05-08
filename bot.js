@@ -124,7 +124,7 @@ client.on("message", message => {
      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
         	.then(msg => {
         	const fetchedMsg = msg.first();
-        	fetchedMsg.edit("**Latest: " + args[1] + "**\n" + "**Attempts: " + plus1 + "**\n" + "**Success: " + plus2 + "**\n" + "**Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "**");
+        	fetchedMsg.edit("**Latest: " + args[1] + "**\n" + "**Attempts: " + plus1 + "**\n" + "**Success: " + plus2 + "**\n" + "**Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "**\n**---**");
         });    
 	     
      console.log("Updated: " + args[1]);
