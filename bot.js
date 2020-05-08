@@ -31,15 +31,6 @@ client.on("message", message => {
 	client.channels.get(`708356276144570388`).send("Test");
     }
 	  
-     if (com === "secret2") {
-	console.log("Secret2");
-	client.channels.get(`708356276144570388`).fetchMessages({around: "708358626582069268", limit: 1})
-        	.then(msg => {
-        	const fetchedMsg = msg.first();
-        	fetchedMsg.edit("TESTING SUCCESS");
-        });
-    }
-	  
 	  
     if (com === "help") {
 	console.log("Helped: " + args[1]);
@@ -69,13 +60,6 @@ client.on("message", message => {
     	     } else if (playerid == "378270588218638336") {
 	        edited = "708358729447374859"
     	     }
-			
-	     
-	     client.channels.get(`708356276144570388`).fetchMessages({around: "708358626582069268", limit: 1})
-        	.then(msg => {
-        	const fetchedMsg = msg.first();
-        	fetchedMsg.edit("TESTING SUCCESS");
-             });
 	     
 	     
 	     
@@ -140,7 +124,7 @@ client.on("message", message => {
      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
         	.then(msg => {
         	const fetchedMsg = msg.first();
-        	fetchedMsg.edit("**Attempts: " + plus1 + "**\n" + "**Success: " + plus2 + "**\n" + "**Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "**");
+        	fetchedMsg.edit("**Latest: " + args[1] + "**\n" + "**Attempts: " + plus1 + "**\n" + "**Success: " + plus2 + "**\n" + "**Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "**");
         });    
 	     
      console.log("Updated: " + args[1]);
