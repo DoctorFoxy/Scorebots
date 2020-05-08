@@ -22,8 +22,8 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	message.reply(":ocean: Pong! :ocean:");
-
+	message.reply(":ocean: Pong! :ocean:" + message.member.id);
+	
     }
 	  
     if (com === "secret") {
@@ -52,6 +52,18 @@ client.on("message", message => {
 	 message.channel.sendEmbed(Embed)
     }
      if (com === "update") {
+	     //var edited;
+	     //if (args[1] == "
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
       if (args[(args.length-3)].charAt(1)*1 > 0) {
       	 message.channel.send("Lets go! you succesfully had: "  + args[(args.length-3)] + " WILDS!!\n");
       }	     
