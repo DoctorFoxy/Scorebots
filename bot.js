@@ -22,7 +22,7 @@ client.on("message", message => {
     //COMMANDS
     if (com === "ping") {
 	console.log("Pong");
-	message.channel.send("PONG!");
+	message.reply("PONG!");
 
     }
  
