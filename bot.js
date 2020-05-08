@@ -41,7 +41,11 @@ client.on("message", message => {
       var i;
       for (i = 2; i < (args.length-2); i++) {
 	      
-      	if (!(args[i].charAt(0)) == "+") {comment += (args[i] + " ");}
+       if (args[i].charAt(0) == "+") {
+	
+       } else {
+	comment += (args[i] + " ")
+       }
      }    
       
      if (comment == "") {
