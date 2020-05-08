@@ -71,7 +71,11 @@ client.on("message", message => {
     	     }
 			
 	     
-	     
+	     client.channels.get(`708356276144570388`).fetchMessages({around: "708358626582069268", limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit("TESTING SUCCESS");
+             });
 	     
 	     
 	     
@@ -113,11 +117,6 @@ client.on("message", message => {
       
 	     
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
-      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
-        	.then(msg => {
-        	const fetchedMsg = msg.first();
-        	fetchedMsg.editEmbed(Embed);
-      });
 	     
       } else {
       message.channel.send(":white_check_mark: Updated: " + args[1]);
@@ -136,14 +135,13 @@ client.on("message", message => {
         .setTimestamp()
       
       client.channels.get(`706575362125201438`).sendEmbed(Embed);
-      client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
-        	.then(msg => {
-        	const fetchedMsg = msg.first();
-        	fetchedMsg.editEmbed(Embed);
-        });
      }
       
-	    
+     client.channels.get(`708356276144570388`).fetchMessages({around: edited, limit: 1})
+        	.then(msg => {
+        	const fetchedMsg = msg.first();
+        	fetchedMsg.edit("**Attempts: " + plus1 + "**\n" + "**Success: " + plus2 + "**\n" + "**Score: " + (args[(args.length-2)]*1)*(args[(args.length-1)]*1+1) + "**");
+        });    
 	     
      console.log("Updated: " + args[1]);
       
