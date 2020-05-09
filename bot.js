@@ -45,7 +45,7 @@ client.on("message", message => {
 	console.log("Helped: " + args[1]);
 	const Embed = new Discord.RichEmbed()
 	.setTitle("Help:")
-	.setDescription("**Commands:**\n**-update**\n\n**!update (name) (optional: comments) (optional: +attempts) (optional: +successes) (attempts) (successes)**\n\n**Without () and with + \n\n**Example: !uppdate Fox Had a cool dream last night +1 +0 5 0**\n\n**-help**\n**Brings this menu to see all commands.**\n\n**-ping**\n**Pings the bot to see whether it is online.**")
+	.setDescription("**Commands:**\n**-update**\n\n**!update (name) (optional: comments) (optional: +attempts) (optional: +successes) (attempts) (successes)**\n\n**Without () and with + **\n\n**Example: !update Fox Had a cool dream last night +1 +0 5 0**\n\n**-help**\n**Brings this menu to see all commands.**\n\n**-ping**\n**Pings the bot to see whether it is online.**")
 	.setTimestamp()
 	.setFooter(message.author.username, message.author.avatarURL);
 	
